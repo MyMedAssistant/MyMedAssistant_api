@@ -10,6 +10,7 @@ class Scheduler(models.Model):
   hours = models.IntegerField()
   dosage = models.CharField(max_length=256)
   start = models.DateTimeField(auto_now=False, auto_now_add=False)
+  last = models.DateTimeField(auto_now=False, auto_now_add=False)
   next_dosage = models.DateTimeField(auto_now=False, auto_now_add=False)
   end = models.DateTimeField(auto_now=False, auto_now_add=False)
   user_id_medication = models.CharField(max_length=64)

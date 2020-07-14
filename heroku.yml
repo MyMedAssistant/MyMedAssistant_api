@@ -4,4 +4,4 @@ build:
 release:
   image: web
 run:
-  web: gunicorn api.wsgi
+  web: ./manage.py collectstatic && gunicorn api.wsgi
