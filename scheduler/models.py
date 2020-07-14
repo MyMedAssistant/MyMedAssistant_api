@@ -5,8 +5,8 @@ from user.models import User
 from medication.models import Medication
 
 class Scheduler(models.Model):
-  user = models.ForeignKey(User, on_delete=models.CASCADE())
-  medication = models.ForeignKey(Medication, on_delete=models.CASCADE())
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
+  medication = models.ForeignKey(Medication, on_delete=models.CASCADE)
   hours = models.IntegerField()
   dosage = models.CharField(max_length=256)
   start = models.DateTimeField(auto_now=False, auto_now_add=False)
