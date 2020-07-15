@@ -1,8 +1,8 @@
 from django.db import models
 import importlib.util
 
-from user.models import User
-from medication.models import Medication
+# from user.models import User
+# from medication.models import Medication
 
 class Scheduler(models.Model):
   user = models.CharField(max_length=64)

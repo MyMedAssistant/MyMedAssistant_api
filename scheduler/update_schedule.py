@@ -1,8 +1,7 @@
 from datetime import datetime
 from datetime import timedelta
-import schedule
 
-from .models import Scheduler
+# from .models import Scheduler
 
 def update_time():
   current_time = datetime.now()
