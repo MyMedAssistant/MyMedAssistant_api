@@ -1,10 +1,11 @@
 from datetime import datetime
 from datetime import timedelta
 
-# from .models import Scheduler
+from scheduler.models import Scheduler
 
 def update_time():
   current_time = datetime.now()
+  print(current_time)
   medications_due = Scheduler.objects.filter(
     next_dosage__day=current_time.day
     ).filter(

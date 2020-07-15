@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     
     'rest_framework',
     'corsheaders',
+    'django_crontab',
 
     'user.apps.UserConfig',
     'medication.apps.MedicationConfig',
@@ -156,6 +157,12 @@ STATICFILES_FIRS = [
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
 ]
+
+CRONJOBS = [
+  ('*/2 * * * *', 'cronjob.cron.update_time', '/cronjob/cron.log')
+]
+
+CRONTAB_COMMAND_SUFFIX = '2>&1'
 
 # CORS_ORIGIN_REGEX_WHITELIST = [
 #     r"^https://beer-full-stack.\w+\.vercel.app$",
