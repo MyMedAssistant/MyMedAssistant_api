@@ -15,7 +15,6 @@ def UpdateTime(request):
       next_dosage__minute=simulated_time.minute
     )
   for med_schedule in medications_due:
-    print(med_schedule)
     med_schedule.last = med_schedule.next_dosage
     med_schedule.next_dosage = med_schedule.next_dosage + timedelta(hours=med_schedule.hours)
     med_schedule.save()
