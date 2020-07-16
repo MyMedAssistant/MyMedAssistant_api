@@ -56,7 +56,6 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'medication.apps.MedicationConfig',
     'scheduler.apps.SchedulerConfig',
-    # 'updater.apps.UpdaterConfig'
 ]
 
 MIDDLEWARE = [

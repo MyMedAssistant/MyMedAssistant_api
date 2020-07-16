@@ -3,7 +3,6 @@ from datetime import timedelta
 from django.http import HttpResponse
 
 from scheduler.models import Scheduler
-from scheduler.serializers import SchedulerSerializer
 
 def update_time(request):
   current_time = datetime.now()
