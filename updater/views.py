@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from scheduler.models import Scheduler
 from scheduler.serializers import SchedulerSerializer
 
-def UpdateTime(request):
+def update_time(request):
   current_time = datetime.now()
   medications_due = Scheduler.objects.filter(
       next_dosage__day=simulated_time.day
