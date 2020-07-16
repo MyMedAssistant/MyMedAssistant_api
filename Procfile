@@ -1,0 +1,1 @@
+checker: python cronjob/cron.py

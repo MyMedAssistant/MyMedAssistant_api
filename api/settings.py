@@ -157,11 +157,10 @@ STATICFILES_FIRS = [
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
 ]
-
 CRONJOBS = [
-  ('*/2 * * * *', 'cronjob.cron.update_time', '/cronjob/cron.log')
+  ('*/1 * * * *', 'cronjob.cron.update_time', 'cronjob.cron.logs')
 ]
-
+print('--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------')
 CRONTAB_COMMAND_SUFFIX = '2>&1'
 
 # CORS_ORIGIN_REGEX_WHITELIST = [

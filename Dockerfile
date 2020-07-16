@@ -6,3 +6,6 @@ WORKDIR /code
 COPY requirements.txt /code/
 RUN pip install -r requirements.txt
 COPY . /code/
+# RUN apt-get update && apt-get -y install cron
+# ADD crontab /etc/cron.d/crontab
+# RUN chmod 0644 /etc/cron.d/crontab
