@@ -142,9 +142,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-# STATIC_DIR = os.path.join(BASE_DIR, 'static')
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
@@ -158,6 +155,4 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 # CORS_ORIGIN_REGEX_WHITELIST = [
-#     r"^https://beer-full-stack.\w+\.vercel.app$",
-#     r"^https://beer-snacks.\w+\.vercel.app$",
 # ]
