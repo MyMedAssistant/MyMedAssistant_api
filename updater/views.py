@@ -1,9 +1,12 @@
+from rest_framework.generics import ListAPIView
+
 from datetime import datetime
 from datetime import timedelta
 
 from scheduler.models import Scheduler
+from scheduler.serializers import SchedulerSerializer
 
-def update_time():
+class UpdateTime(ListAPIView):
   current_time = datetime.now()
   print('UPDATE_TIME', str(current_time))
   simulated_time = current_time.replace(day=25, hour=13, minute=53)
@@ -20,3 +23,5 @@ def update_time():
     med_schedule.last = med_schedule.next_dosage
     med_schedule.next_dosage = med_schedule.next_dosage + timedelta(hours=med_schedule.hours)
     med_schedule.save()
+  queryset = Scheduler.objects.all()
+  serializer_class = SchedulerSerializer

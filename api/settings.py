@@ -52,11 +52,11 @@ INSTALLED_APPS = [
     
     'rest_framework',
     'corsheaders',
-    'django_crontab',
 
     'user.apps.UserConfig',
     'medication.apps.MedicationConfig',
     'scheduler.apps.SchedulerConfig',
+    # 'updater.apps.UpdaterConfig'
 ]
 
 MIDDLEWARE = [
@@ -143,9 +143,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-# STATIC_DIR = os.path.join(BASE_DIR, 'static')
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
@@ -157,13 +154,6 @@ STATICFILES_FIRS = [
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
 ]
-CRONJOBS = [
-  ('*/1 * * * *', 'cronjob.cron.update_time', 'cronjob.cron.logs')
-]
-print('--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------')
-CRONTAB_COMMAND_SUFFIX = '2>&1'
 
 # CORS_ORIGIN_REGEX_WHITELIST = [
-#     r"^https://beer-full-stack.\w+\.vercel.app$",
-#     r"^https://beer-snacks.\w+\.vercel.app$",
 # ]
