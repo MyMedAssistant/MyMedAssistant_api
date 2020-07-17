@@ -100,6 +100,9 @@ DATABASES = {
         "PASSWORD": env.str("DB_PASSWORD"),
         "HOST": env.str("DB_HOST"),
         "PORT": env.int("DB_PORT"),
+        # for running tests only
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -155,9 +158,9 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
+    "https://mymedassistant-react-web.vercel.app"
 ]
 
-# CORS_ORIGIN_REGEX_WHITELIST = [
-#     r"^https://beer-full-stack.\w+\.vercel.app$",
-#     r"^https://beer-snacks.\w+\.vercel.app$",
-# ]
+CORS_ORIGIN_REGEX_WHITELIST = [
+    r"https://mymedassistant-react-web\w+\.vercel.app$"
+]
