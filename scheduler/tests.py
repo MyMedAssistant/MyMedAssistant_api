@@ -22,7 +22,7 @@ class SchedulerTest(TestCase):
       medication = 'Ice Cream',
       hours = 1,
       dosage = '1 bowl',
-      dosage_count = 100
+      dosage_count = 100,
       start = datetime(2020, 7, 16, 16, 20, 00),
       last = datetime(2020, 7, 16, 16, 20, 00),
       next_dosage = datetime(2020, 7, 16, 17, 20, 00),
