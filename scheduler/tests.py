@@ -22,6 +22,7 @@ class SchedulerTest(TestCase):
       medication = 'Ice Cream',
       hours = 1,
       dosage = '1 bowl',
+      dosage_count = 100,
       start = datetime(2020, 7, 16, 16, 20, 00),
       last = datetime(2020, 7, 16, 16, 20, 00),
       next_dosage = datetime(2020, 7, 16, 17, 20, 00),
@@ -35,6 +36,7 @@ class SchedulerTest(TestCase):
     actual_medication = str(schedule.medication)
     actual_hours = str(schedule.hours)
     actual_dosage = str(schedule.dosage)
+    actual_dosage_count = str(schedule.dosage_count)
     actual_start = str(schedule.start)
     actual_last = str(schedule.last)
     actual_next_dosage = str(schedule.next_dosage)
@@ -44,6 +46,7 @@ class SchedulerTest(TestCase):
     self.assertEqual(actual_medication, 'Ice Cream')
     self.assertEqual(actual_hours, '1')
     self.assertEqual(actual_dosage, '1 bowl')
+    self.assertEqual(actual_dosage_count, '100')
     self.assertEqual(actual_start, '2020-07-16 16:20:00+00:00')
     self.assertEqual(actual_last, '2020-07-16 16:20:00+00:00')
     self.assertEqual(actual_next_dosage, '2020-07-16 17:20:00+00:00')
