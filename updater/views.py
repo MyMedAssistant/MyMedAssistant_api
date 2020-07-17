@@ -16,5 +16,6 @@ def update_time(request):
   for med_schedule in medications_due:
     med_schedule.last = med_schedule.next_dosage
     med_schedule.next_dosage = med_schedule.next_dosage + timedelta(hours=med_schedule.hours)
+    med_schedule.dosage_count = med_schedule.dosage_count - 1
     med_schedule.save()
   return HttpResponse("I'm happy")
