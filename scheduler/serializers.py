@@ -12,6 +12,7 @@ class SchedulerSerializer(serializers.ModelSerializer):
       'medication',
       'hours',
       'dosage',
+      'dosage_count',
       'start',
       'last',
       'next_dosage',
